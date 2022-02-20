@@ -1,11 +1,13 @@
-{% extends "account/base.html" %}
+{% extends "MyApp/base.html" %}
 
 {% load i18n %}
 
 {% block head_title %}{% trans "Sign Out" %}{% endblock %}
 
-{% block content %}
-<h1>{% trans "Sign Out" %}</h1>
+{% block logout %}
+<div class="container" style=" margin-left: 20px;  margin-top: 10px;">
+  form method="POST"
+  <h1>{% trans "Sign Out" %}</h1>
 
 <p>{% trans 'Are you sure you want to sign out?' %}</p>
 
@@ -16,6 +18,9 @@
   {% endif %}
   <button type="submit">{% trans 'Sign Out' %}</button>
 </form>
+
+</div>
+
 
 
 {% endblock %}
